@@ -44715,7 +44715,36 @@ __webpack_require__("./resources/assets/js/plugins.js");
 
 /***/ }),
 
-/***/ "./resources/assets/js/backend/block.js":
+/***/ "./resources/assets/js/backend/block/introduce.js":
+/***/ (function(module, exports) {
+
+window.BlockIntroduce = function () {
+  var initCkediter = function initCkediter() {
+    if (typeof ClassicEditor !== 'undefined') {
+      ClassicEditor.create(document.querySelector('#introduce_content'), {
+        toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote']
+      }).then(function (editor) {
+        var toolbarContainer = document.querySelector('#toolbar-container');
+        toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+      }).catch(function (error) {
+        console.error(error);
+      });
+    }
+  };
+
+  return {
+    init: function init() {
+      initCkediter();
+    }
+  };
+}();
+$(document).ready(function () {
+  BlockIntroduce.init();
+});
+
+/***/ }),
+
+/***/ "./resources/assets/js/backend/block/welcome.js":
 /***/ (function(module, exports) {
 
 window.BlockWelcome = function () {
@@ -44931,7 +44960,8 @@ $(function () {
 __webpack_require__("./resources/assets/js/backend/before.js");
 __webpack_require__("./resources/assets/js/backend/app.js");
 __webpack_require__("./resources/assets/js/backend/after.js");
-module.exports = __webpack_require__("./resources/assets/js/backend/block.js");
+__webpack_require__("./resources/assets/js/backend/block/welcome.js");
+module.exports = __webpack_require__("./resources/assets/js/backend/block/introduce.js");
 
 
 /***/ })

@@ -108,6 +108,9 @@ return [
                 'welcome' => [
                     'management' => 'Welcome Management'
                 ],
+                'introduce' => [
+                    'management' => 'Introduce Management'
+                ],
             ],
         ],
     ],

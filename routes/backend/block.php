@@ -12,9 +12,15 @@ Route::group([
         'middleware' => 'role:administrator',
     ], function () {
         /*
-         * User Management
+         * Block welcome Management
          */
         Route::get('welcome', 'WelcomeController@index')->name('welcome.get');
         Route::patch('welcome', 'WelcomeController@update')->name('welcome.update');
+        
+        /*
+         * Block Introduce Management
+         */
+        Route::get('introduce', 'IntroduceController@index')->name('introduce.get');
+        Route::patch('introduce', 'IntroduceController@update')->name('introduce.update');
     });
 });

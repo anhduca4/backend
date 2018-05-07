@@ -18,7 +18,8 @@ mix.sass('resources/assets/sass/frontend/app.scss', 'public/css/frontend.css')
         'resources/assets/js/backend/before.js',
         'resources/assets/js/backend/app.js',
         'resources/assets/js/backend/after.js',
-        'resources/assets/js/backend/block.js'
+        'resources/assets/js/backend/block/welcome.js',
+        'resources/assets/js/backend/block/introduce.js'
     ], 'public/js/backend.js');
 
 if (mix.inProduction() || process.env.npm_lifecycle_event !== 'hot') {
