@@ -67,15 +67,21 @@ class BlockTableSeeder extends Seeder
                 'button_title' => 'Learn more',
                 'button_link' => '#Learn more',
             ],
-        ];
-        Block::create([
-            'type' => Block::TYPE_PRODUCT,
-            'content' => json_encode($product),
-        ]);
-        $product = [
             [
-                'title_small' => 'AIX platform',
-                'content_small' => 'Customise and enhance the backbone of your AI applications system, ensuring seamless intergration and synergy',
+                'title_small' => 'AI apps',
+                'content_small' => 'Automate and consolidate your busunes processes with the latest in AI technology',
+                'title_large' => 'Our AIX platform puts you in control by allowing you to customise and endhance according to your needs',
+                'content_large' => '<p>Our AI platform AIX (AI eXecution) is the only one in the market that allows your business to securely adopt and manage the widest array of AI apps both on premises and in the cloud.
+                You have the possiblity of continuously adding new AI applications, both built by us and third parties alike, to further enhance the capabilities of your business</p>
+                <p>Our AI platform AIX (AI eXecution) is the only one in the market that allows your business to securely adopt and manage the widest array of AI apps both on premises and in the cloud.
+                You have the possiblity of continuously adding new AI applications, both built by us and third parties alike, to further enhance the capabilities of your business</p>
+                ',
+                'button_title' => 'Learn more',
+                'button_link' => '#Learn more',
+            ],
+            [
+                'title_small' => 'Advisory systems',
+                'content_small' => 'Put your trust in a team of experts who care about your bussiness success just as much as you do',
                 'title_large' => 'Our AIX platform puts you in control by allowing you to customise and endhance according to your needs',
                 'content_large' => '<p>Our AI platform AIX (AI eXecution) is the only one in the market that allows your business to securely adopt and manage the widest array of AI apps both on premises and in the cloud.
                 You have the possiblity of continuously adding new AI applications, both built by us and third parties alike, to further enhance the capabilities of your business</p>

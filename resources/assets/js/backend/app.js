@@ -86,6 +86,21 @@ $(document).ready(function($){
         e.preventDefault();
     });
 
+    if(typeof ClassicEditor !== 'undefined' && $('.ckediter').length > 0){
+        $('.ckediter').each(function() {
+            if($(this).prop('id')){
+                ClassicEditor.create(document.querySelector('#'+$(this).prop('id')), {
+                    toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
+                  }).then( editor => {
+                    const toolbarContainer = document.querySelector( '#toolbar-container' );
+                    toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+                  }).catch( error => {
+                      console.error( error );
+                  });
+            }
+        });
+    }
+
 });
 
 function capitalizeFirstLetter(string) {

@@ -1,6 +1,6 @@
 window.BlockIntroduce = function () {
   var initCkediter = function () {
-    if(typeof ClassicEditor !== 'undefined'){
+    if(typeof ClassicEditor !== 'undefined' && $('#introduce_content').length > 0){
       ClassicEditor.create(document.querySelector('#introduce_content'), {
           toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
         }).then( editor => {
@@ -9,7 +9,6 @@ window.BlockIntroduce = function () {
         }).catch( error => {
             console.error( error );
         });
-
     }
   }
 

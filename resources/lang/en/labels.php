@@ -111,6 +111,10 @@ return [
                 'introduce' => [
                     'management' => 'Introduce Management'
                 ],
+                'product' => [
+                    'management' => 'Product & Service Management',
+                    'menu' => 'Product & Service'
+                ],
             ],
         ],
     ],

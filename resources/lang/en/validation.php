@@ -112,11 +112,32 @@ return [
         'button_text.*' => [
             'required' => 'Each button text must required',
         ],
-        'button_link.*' => [
-            'required' => 'Each button link must required',
+        'title_small.*' => [
+            'required' => 'Each product name must required',
         ],
-    ],
+        'content_small.*' => [
+            'required' => 'Each product description must required',
+        ],
+        'title_large.*' => [
+            'required' => 'Each product benefit must required',
+        ],
+        'content_large.*' => [
+            'required' => 'Each product details must required',
+        ],
+        'button_link.*' => [
+            'required' => 'Each product details must required',
+            'url' => 'Each button link must url',
+        ],
 
+    ],
+/*
+'title_small.*' => 'required',
+            'content_small.*' => 'required',
+            'title_large.*' => 'required',
+            'content_large.*' => 'required',
+            'button_title.*' => 'required',
+            'button_link.*' => 'required|url',
+             */
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes

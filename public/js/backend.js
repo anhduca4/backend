@@ -44682,6 +44682,21 @@ $(document).ready(function ($) {
     $('a[href="#"][data-top!=true]').click(function (e) {
         e.preventDefault();
     });
+
+    if (typeof ClassicEditor !== 'undefined' && $('.ckediter').length > 0) {
+        $('.ckediter').each(function () {
+            if ($(this).prop('id')) {
+                ClassicEditor.create(document.querySelector('#' + $(this).prop('id')), {
+                    toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote']
+                }).then(function (editor) {
+                    var toolbarContainer = document.querySelector('#toolbar-container');
+                    toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+                }).catch(function (error) {
+                    console.error(error);
+                });
+            }
+        });
+    }
 });
 
 function capitalizeFirstLetter(string) {
@@ -44720,7 +44735,7 @@ __webpack_require__("./resources/assets/js/plugins.js");
 
 window.BlockIntroduce = function () {
   var initCkediter = function initCkediter() {
-    if (typeof ClassicEditor !== 'undefined') {
+    if (typeof ClassicEditor !== 'undefined' && $('#introduce_content').length > 0) {
       ClassicEditor.create(document.querySelector('#introduce_content'), {
         toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote']
       }).then(function (editor) {

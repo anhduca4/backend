@@ -22,5 +22,11 @@ Route::group([
          */
         Route::get('introduce', 'IntroduceController@index')->name('introduce.get');
         Route::patch('introduce', 'IntroduceController@update')->name('introduce.update');
+
+        /*
+         * Block Product & Service Management
+         */
+        Route::get('product', 'ProductController@index')->name('product.get');
+        Route::patch('product', 'ProductController@update')->name('product.update');
     });
 });

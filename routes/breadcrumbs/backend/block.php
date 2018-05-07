@@ -10,3 +10,8 @@ Breadcrumbs::register('admin.block.introduce.get', function ($breadcrumbs) {
     $breadcrumbs->push(__('labels.backend.access.block.introduce.management'), route('admin.block.introduce.get'));
 });
 
+Breadcrumbs::register('admin.block.product.get', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push(__('labels.backend.access.block.product.management'), route('admin.block.product.get'));
+});
+

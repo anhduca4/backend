@@ -18,4 +18,14 @@ class Block extends Model
     const TYPE_NETWORK = 'network';
     const TYPE_CONTACT_US = 'contact_us';
     const TYPE_FOOTER = 'footer';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'type',
+        'content',
+    ];
 }
