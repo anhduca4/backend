@@ -49,6 +49,10 @@
     @include('backend.includes.footer')
 
     <!-- Scripts -->
+    <script>
+        window.config = {};
+        config.base_url = '{!!url('/')!!}/';
+    </script>
     @stack('before-scripts')
     {!! script(mix('js/backend.js')) !!}
     @stack('after-scripts')

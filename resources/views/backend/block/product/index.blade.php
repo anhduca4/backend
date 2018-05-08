@@ -1,6 +1,6 @@
 @extends ('backend.layouts.app')
 
-@section ('title', app_name() . ' | '. __('labels.backend.access.block.product.management'))
+@section ('title', __('labels.backend.access.block.product.management'). ' - Admin ' . app_name())
 
 @section('content')
 {{ html()->modelForm($blockProducts, 'PATCH', route('admin.block.product.update'))->class('form-horizontal')->open() }}

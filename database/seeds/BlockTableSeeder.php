@@ -96,48 +96,8 @@ class BlockTableSeeder extends Seeder
             'type' => Block::TYPE_PRODUCT,
             'content' => json_encode($product),
         ]);
-        $scope = [
-            [
-                'html' => '<div class="">
-                            <h1>hhhhhhhhhhh</h1>
-                            <ul>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                            </ul>
-                        </div>
-                        <div class="">
-                            <h1>hhhhhhhhhhh</h1>
-                            <ul>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                            </ul>
-                        </div>
-                        <div class="">
-                            <h1>hhhhhhhhhhh</h1>
-                            <ul>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                                <li>aaa</li>
-                            </ul>
-                        </div>
-                ',
-            ],
-        ];
-        Block::create([
-            'type' => Block::TYPE_SCOPES,
-            'content' => json_encode($scope),
-        ]);
+        $scope = '[{"name": "Business Areas", "children": [{"name": "Sales"}, {"name": "Security/Authentication"}, {"name": "Compliance"}, {"name": "Fraud detection"}, {"name": "Human Resources/Recruiting"}, {"name": "Marketing"}, {"name": "Secretarial"}, {"name": "Business Intelligence"}]}, {"name": "Types of Processes", "children": [{"name": "Business Processes", "children": [{"name": "Contract Management"}, {"name": "Compliance Management"}, {"name": "Data Management"}, {"name": "Stackholders Management"}]}, {"name": "Marketing Processes", "children": [{"name": "Questionnaire Survey"}, {"name": "Recommendation"}, {"name": "Blog/SNS Management"}, {"name": "Advertisement Management"}]}, {"name": "Survery / Research Processes", "children": [{"name": "Price Survey"}, {"name": "Competitor Analysis"}, {"name": "Procuremnt Management"}]}]}, {"name": "Types of Documents", "children": [{"name": "Application forms"}, {"name": "Receipts/Invoices"}, {"name": "Certificates"}, {"name": "Contracts"}, {"name": "Emails"}, {"name": "Bussiness Cards"}, {"name": "Resumes/CVs"}, {"name": "Expense Claims"}, {"name": "Identification Cards"}, {"name": "Etc."}]}]';
+        Block::create(['type' => Block::TYPE_SCOPES,'content' => $scope,]);
         $bennefit = [
             [
                 'title' => 'Reducted Costs',

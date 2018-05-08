@@ -15,3 +15,8 @@ Breadcrumbs::register('admin.block.product.get', function ($breadcrumbs) {
     $breadcrumbs->push(__('labels.backend.access.block.product.management'), route('admin.block.product.get'));
 });
 
+Breadcrumbs::register('admin.block.scopes.get', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push(__('labels.backend.access.block.scopes.management'), route('admin.block.scopes.get'));
+});
+

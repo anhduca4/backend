@@ -1,6 +1,6 @@
 @extends ('backend.layouts.app')
 
-@section ('title', app_name() . ' | '. __('labels.backend.access.block.welcome.management'))
+@section ('title', __('labels.backend.access.block.welcome.management'). ' - Admin ' . app_name())
 
 @section('content')
 @php

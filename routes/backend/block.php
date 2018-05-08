@@ -28,5 +28,11 @@ Route::group([
          */
         Route::get('product', 'ProductController@index')->name('product.get');
         Route::patch('product', 'ProductController@update')->name('product.update');
+
+        /*
+         * Scopes of use Management
+         */
+        Route::get('scopes', 'ScopesController@index')->name('scopes.get');
+        Route::post('scopes', 'ScopesController@update')->name('scopes.update');
     });
 });

@@ -28,4 +28,24 @@ class Block extends Model
         'type',
         'content',
     ];
+
+    /**
+     * Create data array scopes
+     * 
+     * @param array $dataScopes
+     * @return array
+     */
+    public function createScopesData($dataScopes){
+        $_dataScopes = [];
+        foreach($dataScopes as $vScopes){
+            $scopes = [];
+            $scopes['name'] = $vScopes['name'] ?? '';
+            // var_dump($vScopes['children']);
+            if(isset($vScopes['children']) && !empty($vScopes['children']) && is_array($vScopes['children'])){
+                $scopes['children'] = self::createScopesData($vScopes['children']);
+            }
+            $_dataScopes[] = $scopes;
+        }
+        return $_dataScopes;
+    }
 }

@@ -115,6 +115,10 @@ return [
                     'management' => 'Product & Service Management',
                     'menu' => 'Product & Service'
                 ],
+                'scopes' => [
+                    'management' => 'Scopes of use Management',
+                    'menu' => 'Scopes of use'
+                ],
             ],
         ],
     ],

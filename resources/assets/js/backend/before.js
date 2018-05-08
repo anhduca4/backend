@@ -8,3 +8,4 @@
 require('../bootstrap');
 require('pace');
 require('../plugins');
+require('./jquery.nestable');
