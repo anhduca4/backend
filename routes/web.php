@@ -7,6 +7,17 @@
 
 // Switch between the included languages
 Route::get('lang/{lang}', 'LanguageController');
+Route::get('api/anhduc', function () {
+    return ['dep' => 'x'];
+});
+
+Route::get('api/set-session', 'Frontend\HomeController@setSession');
+Route::get('api/get-session', 'Frontend\HomeController@getSession');
+Route::group(['prefix' => '/rest/application-editor'], function (){
+    Route::get('/sample/document', 'Frontend\HomeController@sampleDocument');
+    Route::get('/authentication/user', 'Frontend\HomeController@auth');
+});
+
 
 /*
  * Frontend Routes

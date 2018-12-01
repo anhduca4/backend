@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('/upload', 'Frontend\HomeController@upload');
+Route::get('/python', 'Frontend\HomeController@python');
+Route::post('/python', 'Frontend\HomeController@python');
+Route::put('/python', 'Frontend\HomeController@python');
+Route::delete('/python', 'Frontend\HomeController@python');
